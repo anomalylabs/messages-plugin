@@ -1,4 +1,4 @@
-<?php namespace Addon\Tag\Messages;
+<?php namespace Streams\Addon\Tag\Messages;
 
 use cebe\markdown\Markdown;
 use Streams\Core\Addon\TagAbstract;
