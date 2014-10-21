@@ -1,17 +1,17 @@
 {
-    "name": "anomalylabs/asset-tag",
-    "type": "tag",
-    "description": "Asset tag for Streams Platform",
+    "name": "anomaly/messages-tag",
+    "type": "streams-addon",
+    "description": "Messages tag.",
     "authors": [
         {
             "name": "AnomalyLabs",
-            "email": "projects@aiwebsystems.com"
+            "email": "hello@anomaly.is"
         }
     ],
-    "source" : {
-        "type" : "vcs",
-        "url" : "git@github.com:anomalylabs/messages-tag.git",
-        "reference" : "master"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
