@@ -5,14 +5,16 @@ use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
 
 class MessagesTag extends TagAddon
 {
+    protected $slug = 'messages';
+
     /**
      * Create a new MessageTag instance.
      */
     public function __construct()
     {
-        $this->messages = \App::make('streams.messages');
-
         $this->parser = new Markdown();
+
+        $this->messages = app()->make('streams.messages');
     }
 
     /**
@@ -26,7 +28,6 @@ class MessagesTag extends TagAddon
         return array_map(
             function ($message) {
 
-                // Markdown makes stuff like <strong>This</strong> much easier.
                 $message = $this->parser->parse($message);
 
                 return compact('message');
