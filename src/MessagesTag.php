@@ -1,9 +1,9 @@
-<?php namespace Anomaly\Streams\Tag\Messages;
+<?php namespace Anomaly\Streams\Addon\Tag\Messages;
 
 use cebe\markdown\Markdown;
-use Streams\Core\Addon\TagAbstract;
+use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
 
-class MessagesTag extends TagAbstract
+class MessagesTag extends TagAddon
 {
     /**
      * Create a new MessageTag instance.
