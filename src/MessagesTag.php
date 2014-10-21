@@ -10,7 +10,7 @@ class MessagesTag extends TagAddon
      */
     public function __construct()
     {
-        $this->messages = \App::make('messages');
+        $this->messages = \App::make('streams.messages');
 
         $this->parser = new Markdown();
     }
