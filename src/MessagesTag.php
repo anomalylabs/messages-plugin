@@ -28,7 +28,7 @@ class MessagesTag extends TagAddon
         return array_map(
             function ($message) {
 
-                $message = $this->parser->parse($message);
+                $message = $this->parser->parse(trans($message));
 
                 return compact('message');
             },
