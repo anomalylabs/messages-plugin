@@ -1,24 +1,38 @@
 <?php namespace Anomaly\Streams\Addon\Tag\Messages;
 
-use cebe\markdown\Markdown;
 use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
+use cebe\markdown\Parser;
 
+/**
+ * Class MessagesTag
+ *
+ * @link          http://anomaly.is/streams-platform
+ * @author        AnomalyLabs, Inc. <hello@anomaly.is>
+ * @author        Ryan Thompson <ryan@anomaly.is>
+ * @package       Anomaly\Streams\Addon\Tag\Messages
+ */
 class MessagesTag extends TagAddon
 {
-    protected $slug = 'messages';
 
     /**
-     * Create a new MessageTag instance.
+     * The parser object.
+     *
+     * @var \cebe\markdown\Parser
      */
-    public function __construct()
-    {
-        $this->parser = new Markdown();
+    protected $parser;
 
-        $this->messages = app()->make('streams.messages');
+    /**
+     * Create a new MessagesTag instance.
+     *
+     * @param Parser $parser
+     */
+    function __construct(Parser $parser)
+    {
+        $this->parser = $parser;
     }
 
     /**
-     * Get messages of a certain type.
+     * Return the messages of a provided type.
      *
      * @param null $type
      * @return array
@@ -32,14 +46,14 @@ class MessagesTag extends TagAddon
 
                 return compact('message');
             },
-            $this->messages->get($this->getAttribute('type', 0, $type))
+            app('streams.messages')->get($this->getAttribute('type', $type))
         );
     }
 
     /**
      * Return success messages.
      *
-     * @return mixed
+     * @return array
      */
     public function success()
     {
@@ -49,7 +63,7 @@ class MessagesTag extends TagAddon
     /**
      * Return info messages.
      *
-     * @return mixed
+     * @return array
      */
     public function info()
     {
@@ -59,7 +73,7 @@ class MessagesTag extends TagAddon
     /**
      * Return warning messages.
      *
-     * @return mixed
+     * @return array
      */
     public function warning()
     {
@@ -69,7 +83,7 @@ class MessagesTag extends TagAddon
     /**
      * Return error messages.
      *
-     * @return mixed
+     * @return array
      */
     public function error()
     {
