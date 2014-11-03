@@ -1,6 +1,7 @@
 <?php namespace Anomaly\Streams\Addon\Tag\Messages;
 
 use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
+use cebe\markdown\Markdown;
 use cebe\markdown\Parser;
 
 /**
@@ -26,7 +27,7 @@ class MessagesTag extends TagAddon
      *
      * @param Parser $parser
      */
-    function __construct(Parser $parser)
+    function __construct(Markdown $parser)
     {
         $this->parser = $parser;
     }
