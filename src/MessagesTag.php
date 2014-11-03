@@ -18,7 +18,7 @@ class MessagesTag extends TagAddon
     /**
      * The parser object.
      *
-     * @var \cebe\markdown\Parser
+     * @var \cebe\markdown\Markdown|\cebe\markdown\Parser
      */
     protected $parser;
 
