@@ -1,4 +1,0 @@
-messages-tag
-============
-
-Messages tag.
