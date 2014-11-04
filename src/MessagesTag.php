@@ -1,6 +1,6 @@
 <?php namespace Anomaly\Streams\Addon\Tag\Messages;
 
-use Anomaly\Streams\Platform\Addon\Tag\TagAddon;
+use Anomaly\Streams\Platform\Addon\Tag\Tag;
 use cebe\markdown\Markdown;
 use cebe\markdown\Parser;
 
@@ -12,7 +12,7 @@ use cebe\markdown\Parser;
  * @author        Ryan Thompson <ryan@anomaly.is>
  * @package       Anomaly\Streams\Addon\Tag\Messages
  */
-class MessagesTag extends TagAddon
+class MessagesTag extends Tag
 {
 
     /**
