@@ -47,7 +47,7 @@ class MessagesTag extends Tag
 
                 return compact('message');
             },
-            app('streams.messages')->get($this->getAttribute('type', $type))
+            []//app('messages')->get($this->getAttribute('type', $type))
         );
     }
 
