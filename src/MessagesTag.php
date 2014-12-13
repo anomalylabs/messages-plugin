@@ -47,7 +47,7 @@ class MessagesTag extends Tag
 
                 return compact('message');
             },
-            app('session')->get($this->getAttribute('type', $type), [])
+            app('session')->get($this->attributes->getValue('type', $type), [])
         );
     }
 
