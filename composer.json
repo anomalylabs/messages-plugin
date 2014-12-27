@@ -1,7 +1,7 @@
 {
-    "name": "anomaly/messages-tag",
+    "name": "anomaly/messages-plugin",
     "type": "streams-addon",
-    "description": "Messages tag.",
+    "description": "Messages plugin.",
     "authors": [
         {
             "name": "AnomalyLabs",
