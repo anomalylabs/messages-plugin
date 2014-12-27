@@ -1,18 +1,18 @@
-<?php namespace Anomaly\Streams\Addon\Tag\Messages;
+<?php namespace Anomaly\Streams\Addon\Plugin\Messages;
 
-use Anomaly\Streams\Platform\Addon\Tag\Tag;
+use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
 use cebe\markdown\Markdown;
 use cebe\markdown\Parser;
 
 /**
- * Class MessagesTag
+ * Class MessagesPlugin
  *
  * @link          http://anomaly.is/streams-platform
  * @author        AnomalyLabs, Inc. <hello@anomaly.is>
  * @author        Ryan Thompson <ryan@anomaly.is>
- * @package       Anomaly\Streams\Addon\Tag\Messages
+ * @package       Anomaly\Streams\Addon\Plugin\Messages
  */
-class MessagesTag extends Tag
+class MessagesPlugin extends Plugin
 {
 
     /**
@@ -23,7 +23,7 @@ class MessagesTag extends Tag
     protected $parser;
 
     /**
-     * Create a new MessagesTag instance.
+     * Create a new MessagesPlugin instance.
      *
      * @param Parser $parser
      */

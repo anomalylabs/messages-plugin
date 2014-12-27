@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Messages',
-    'description' => 'Messages tag.',
+    'description' => 'Messages plugin.',
 ];
