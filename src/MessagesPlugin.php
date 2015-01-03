@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\Plugin\Messages;
+<?php namespace Anomaly\MessagesPlugin;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
 use cebe\markdown\Markdown;
