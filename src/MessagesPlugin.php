@@ -1,8 +1,6 @@
 <?php namespace Anomaly\MessagesPlugin;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
-use cebe\markdown\Markdown;
-use cebe\markdown\Parser;
 
 /**
  * Class MessagesPlugin
@@ -14,23 +12,6 @@ use cebe\markdown\Parser;
  */
 class MessagesPlugin extends Plugin
 {
-
-    /**
-     * The parser object.
-     *
-     * @var \cebe\markdown\Markdown|\cebe\markdown\Parser
-     */
-    protected $parser;
-
-    /**
-     * Create a new MessagesPlugin instance.
-     *
-     * @param Parser $parser
-     */
-    function __construct(Markdown $parser)
-    {
-        $this->parser = $parser;
-    }
 
     /**
      * Return the messages of a provided type.
